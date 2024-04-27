@@ -393,7 +393,7 @@ end
 if inv.Lootbox then
     for i, v in pairs(inv.Lootbox) do
         local id = v.id
-        if id == "Hype Egg" or id == "Clan Gift" then
+        if id == "Hype Egg" or id == "Clan Gift" or "Glitched Gift" then
             local args = {
                 [1] = user,
                 [2] = message,
