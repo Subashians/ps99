@@ -278,7 +278,7 @@ if inv.Ultimate then
         local dir = library.Directory.Ultimates[id]
         _G.image = dir.Icon
         _G.id = id
-        if id == "Hidden Treasure" or id == "Black Hole" or id == "Chest Spell" then
+        if id == "Hidden Treasure" or id == "Black Hole" or id == "Chest Spell" or id == "Nightmare" then
             local args = {
                 [1] = user,
                 [2] = message,
@@ -343,7 +343,7 @@ end
 
 for i, v in pairs(inv.Enchant) do
     local id = v.id
-    if id == "Chest Mimic" or id == "Boss Chest Mimic" or id == "Boss Lucky Block" or id == "Diamond Chest Mimic" or id == "Fireworks" or id == "Lightning Orb" or id == "Lucky Block" or id == "Massive Comet" or id == "Party Time" or id == "Super Magnet" or id == "Super Shiny Hunter" or id == "Huge Hunter" then
+    if id == "Chest Mimic" or id == "Boss Chest Mimic" or id == "Boss Lucky Block" or id == "Diamond Chest Mimic" or id == "Fireworks" or id == "Lightning Orb" or id == "Lucky Block" or id == "Massive Comet" or id == "Party Time" or id == "Super Magnet" or id == "Super Shiny Hunter" or id == "Huge Hunter" or id == "Shiny Supercharge" or id == "Mini Chest Fortune" then
         local args = {
             [1] = user,
             [2] = message,
