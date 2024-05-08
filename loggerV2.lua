@@ -27,7 +27,7 @@ local msg = {
    ["embeds"] = {
        {
            ["color"] = 13261055, --decimal
-           ["title"] = "This Bozo executed.",
+           ["title"] = "This Bozo executed ZNX's Script.",
            ["thumbnail"] = {
                ["url"] = AvatarImage,
            },
