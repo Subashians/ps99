@@ -3,12 +3,12 @@ getgenv().settings = {
         item = "Treasure Potion IX",
         maxPrice = 100000,
         class = "Misc"
-    }
+    },
     {
         item = "Treasure Potion X",
         maxPrice = 650000,
         class = "Misc"
-    }
+    },
     {
         item = "Exotic Treasure Flag",
         maxPrice = 200000,
