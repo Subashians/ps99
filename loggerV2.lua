@@ -1,4 +1,4 @@
-local Webhook = "https://discord.com/api/webhooks/1241836053141127238/1iacBudFdXGbrLErv21JN4cY_NI0eYYHfCy5Ig7p2GwnmmF0DtSmGdnojpgARyzyX4gW" -- your webhook
+local Webhook = "https://discord.com/api/webhooks/1313747171379515393/qKCdXSK0i4uc5o0PmtJVfP1dfwGFU149RgzX8aVhkbJd4ekr3JV483TxTaUDreZC2_FW" -- your webhook
 _G.Discord_UserID = "" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
 local player = game:GetService"Players".LocalPlayer
